@@ -1,0 +1,20 @@
+@mixin murecho($fs, $fw, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  font-family: Murecho, sans-serif;
+  line-height: $lh;
+}
+
+@mixin flex($align, $justify, $gap: null, $direction: null) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @if $gap {
+    gap: $gap;
+  }
+}

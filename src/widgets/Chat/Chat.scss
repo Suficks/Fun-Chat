@@ -1,0 +1,56 @@
+@import '../../shared/styles/mixins';
+
+.chat {
+  box-sizing: border-box;
+  width: 65%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 5px;
+
+  background: url('../../shared/assets/images/chat-background.jpg');
+}
+
+.dialog_header {
+  @include flex(center, space-around);
+  box-sizing: border-box;
+  height: 5%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.dialog_content {
+  height: 84%;
+  padding-right: 10px;
+  overflow-y: auto;
+}
+
+.info {
+  @include flex(center, center, 0, column);
+  height: 100%;
+
+  text-align: center;
+}
+
+.dialog_form {
+  padding: 10px 0 0;
+  border: none;
+  border-top: 1px solid white;
+  border-radius: 0;
+
+  @include flex(center, center, 10px);
+}
+
+.message_input {
+  width: 100%;
+}
+
+@media screen and (width <=550px) {
+  .dialog_content {
+    height: 82%;
+  }
+
+  .message_input {
+    height: 50px;
+  }
+}

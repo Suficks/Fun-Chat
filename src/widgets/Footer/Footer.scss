@@ -1,0 +1,15 @@
+@import '../../shared/styles/mixins';
+
+.footer {
+  border-top: 1px solid white;
+
+  @include murecho(19px, 400, 19px);
+}
+
+.link {
+  transition: 0.2s ease;
+
+  &:hover {
+    text-shadow: 1px 1px 2px white;
+  }
+}

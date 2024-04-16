@@ -1,0 +1,41 @@
+@import '../../shared/styles/mixins';
+
+.auth_form {
+  @include flex(center, center, 15px, column);
+  width: 100%;
+  max-width: 350px;
+
+  background: url('../../shared/assets/images/chat-background.jpg');
+}
+
+.fieldset {
+  width: 100%;
+  max-width: 300px;
+  padding: 4%;
+  border: 1px solid white;
+}
+
+.input_wrap {
+  position: relative;
+
+  @include flex(center, space-between, 10px);
+
+  margin-bottom: 23px;
+}
+
+.error {
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+
+  display: none;
+
+  color: #ff2b2b;
+  text-align: start;
+
+  @include murecho(15px, 400, 16px);
+}
+
+.error_active {
+  display: block;
+}

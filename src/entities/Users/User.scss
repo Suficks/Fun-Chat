@@ -1,0 +1,78 @@
+@import '../../shared/styles/mixins';
+
+.user {
+  position: relative;
+
+  @include flex(center, flex-start, 10px);
+  margin-bottom: 8px;
+  padding: 5px;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: grey;
+  }
+}
+
+.marker {
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+
+  background-color: white;
+}
+
+.online {
+  background-color: rgb(4 250 4);
+}
+
+.user_name {
+  width: 68%;
+  overflow: hidden;
+}
+
+.unread {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+
+  min-width: 20px;
+  min-height: 20px;
+  padding: 2px;
+  border: 1px solid rgb(4 250 4);
+  border-radius: 50%;
+
+  text-align: center;
+
+  @include murecho(12px, 400, 17px);
+}
+
+@media screen and (width <= 550px) {
+  .list {
+    padding: 0;
+  }
+
+  .user_name {
+    width: 65%;
+
+    @include murecho(14px, 400, 17px);
+    overflow: hidden;
+  }
+
+  .unread {
+    min-width: 15px;
+    min-height: 15px;
+
+    @include murecho(12px, 400, 13px);
+  }
+}
+
+@media screen and (width <= 500px) {
+  .user_name {
+    width: 55%;
+  }
+}

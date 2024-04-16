@@ -1,0 +1,98 @@
+@import 'reset-css';
+@import 'shared/assets/fonts/fonts';
+@import 'shared/styles/mixins';
+
+* {
+  scrollbar-color: #373737 transparent;
+  scrollbar-width: thin;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  color: white;
+
+  background: url('./shared/assets/images/background.jpg') no-repeat;
+  background-size: cover;
+
+  @include murecho(17px, 400, 20px);
+}
+
+form {
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+input {
+  box-sizing: border-box;
+  height: 38px;
+  padding: 1% 3%;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  outline: none;
+
+  @include murecho(16px, 400, 24px);
+
+  &:focus {
+    box-shadow: 0 1px 14px 2px #f7f7fa66;
+  }
+}
+
+.button {
+  min-width: 140px;
+  height: 38px;
+  padding: 5px;
+  border: 1px solid black;
+
+  background: #cee6ff;
+  outline: none;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    background: #7acff4;
+  }
+}
+
+.disabled {
+  border-color: rgb(118 118 118 / 80%);
+
+  color: rgb(0 0 0 / 40%);
+
+  background-color: rgb(239 239 239 / 90%);
+
+  pointer-events: none;
+}
+
+.no_events {
+  pointer-events: none;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.small_btn {
+  min-width: 100px;
+}
+
+@media screen and (width <= 550px) {
+  body {
+    @include murecho(14px, 400, 18px);
+  }
+
+  .button {
+    min-width: 80px;
+  }
+}

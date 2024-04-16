@@ -1,0 +1,30 @@
+@import '../../shared/styles/mixins';
+
+.header,
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid white;
+  border-radius: 5px;
+
+  background: url('../../shared/assets/images/chat-background.jpg');
+
+  @include flex(center, space-between);
+}
+
+.title {
+  @include murecho(18px, 700, 20px);
+}
+
+.buttons_container {
+  @include flex(center, center, 15px);
+}
+
+@media screen and (width <= 550px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../shared/styles/mixins';
+
+.main {
+  @include flex(center, center, 0, column);
+  width: 90%;
+}
+
+.content {
+  @include flex(center, center);
+  width: 100%;
+  height: calc(100vh - 244px);
+}
+
+.users {
+  box-sizing: border-box;
+  width: 35%;
+  height: 100%;
+  padding: 15px 8px 15px 15px;
+  border-right: 1px solid white;
+  border-radius: 5px;
+
+  background: url('../../shared/assets/images/chat-background.jpg');
+}
+
+.search_input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.list {
+  height: 92%;
+  padding: 0 10px;
+  overflow-y: auto;
+
+  @include murecho(18px, 400, 21px);
+}
+
+@media screen and (width <= 550px) {
+  .list {
+    padding: 0;
+  }
+}
